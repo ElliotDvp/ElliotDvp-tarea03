@@ -1,34 +1,101 @@
 @model ElliotDvp_tarea03.Models.Mascota
 
-<h2>Registrar Mascota</h2>
+@{
+    ViewData["Title"] = "Registrar Mascota";
+}
 
-<form asp-action="Enviar" method="post">
-    <div>
-        <label>Nombre:</label>
-        <input asp-for="Nombre" />
-        <span asp-validation-for="Nombre" style="color:red"></span>
-    </div>
-    <div>
-        <label>Especie:</label>
-        <input asp-for="Especie" />
-        <span asp-validation-for="Especie" style="color:red"></span>
-    </div>
-    <div>
-        <label>Edad:</label>
-        <input asp-for="Edad" type="number" />
-        <span asp-validation-for="Edad" style="color:red"></span>
-    </div>
-    <button type="submit">Registrar</button>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('https://vitakraft.es/wp-content/uploads/2023/10/shutterstock_1079352791-1-1110x600.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+    }
 
-    <div>
+    .form-container {
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: 60px auto;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    .form-container h2 {
+        text-align: center;
+        color: #2E7D32;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        display: block;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        background-color: #2E7D32;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #256428;
+    }
+
+    .mensaje {
+        color: green;
+        margin-top: 15px;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<div class="form-container">
+    <h2>🐾 Registrar Mascota 🐾</h2>
+
+    <form asp-action="Enviar" method="post">
+        <div class="form-group">
+            <label>Nombre:</label>
+            <input asp-for="Nombre" />
+            <span asp-validation-for="Nombre" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label>Especie:</label>
+            <input asp-for="Especie" />
+            <span asp-validation-for="Especie" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label>Edad:</label>
+            <input asp-for="Edad" type="number" />
+            <span asp-validation-for="Edad" style="color:red"></span>
+        </div>
+
+        <button type="submit">Registrar</button>
+
         @if (ViewBag.Mensaje != null) {
-            <div style="color:green;">
+            <div class="mensaje">
                 @ViewBag.Mensaje
-            </div>  
+            </div>
         }
-         </div>
-
-</form>
+    </form>
+</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

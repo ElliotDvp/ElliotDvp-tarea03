@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElliotDvp-tarea03")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2afdcc11782fdcf2bcea463fc68db5e6ec56ca01")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cfde0c99cf8d7d4423f4d8f6fb82497080c5f0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElliotDvp-tarea03")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElliotDvp-tarea03")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
