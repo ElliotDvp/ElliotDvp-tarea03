@@ -94,3 +94,4 @@ E:\ing sistemas\programacion1\Github\netdemo2025-3lab\ElliotDvp-tarea03\obj\Debu
 E:\ing sistemas\programacion1\Github\netdemo2025-3lab\ElliotDvp-tarea03\obj\Debug\net9.0\ElliotDvp-tarea03.pdb
 E:\ing sistemas\programacion1\Github\netdemo2025-3lab\ElliotDvp-tarea03\obj\Debug\net9.0\ElliotDvp-tarea03.genruntimeconfig.cache
 E:\ing sistemas\programacion1\Github\netdemo2025-3lab\ElliotDvp-tarea03\obj\Debug\net9.0\ref\ElliotDvp-tarea03.dll
+E:\ing sistemas\programacion1\Github\netdemo2025-3lab\ElliotDvp-tarea03\obj\Debug\net9.0\ElliotDvp-tarea03.sourcelink.json

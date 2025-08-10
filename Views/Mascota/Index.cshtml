@@ -1,0 +1,35 @@
+@model ElliotDvp_tarea03.Models.Mascota
+
+<h2>Registrar Mascota</h2>
+
+<form asp-action="Enviar" method="post">
+    <div>
+        <label>Nombre:</label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre" style="color:red"></span>
+    </div>
+    <div>
+        <label>Especie:</label>
+        <input asp-for="Especie" />
+        <span asp-validation-for="Especie" style="color:red"></span>
+    </div>
+    <div>
+        <label>Edad:</label>
+        <input asp-for="Edad" type="number" />
+        <span asp-validation-for="Edad" style="color:red"></span>
+    </div>
+    <button type="submit">Registrar</button>
+
+    <div>
+        @if (ViewBag.Mensaje != null) {
+            <div style="color:green;">
+                @ViewBag.Mensaje
+            </div>  
+        }
+         </div>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
