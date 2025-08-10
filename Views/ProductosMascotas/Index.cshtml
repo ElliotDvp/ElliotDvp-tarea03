@@ -1,13 +1,15 @@
 @model List<TuProyecto.Models.ProductoMascota>
 
-<h1>Productos para Mascotas</h1>
-<table class="table">
+<h1 class="titulo-productos">Productos para Mascotas</h1>
+
+<table class="tabla-productos">
     <thead>
         <tr>
             <th>Nombre</th>
             <th>Categoría</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Imagen</th>
         </tr>
     </thead>
     <tbody>
@@ -18,7 +20,60 @@
                 <td>@p.Categoria</td>
                 <td>@p.Precio</td>
                 <td>@p.Stock</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(p.Url))
+                    {
+                        <img src="@p.Url" alt="Imagen del producto" />
+                    }
+                </td>
             </tr>
         }
     </tbody>
 </table>
+
+<style>
+    .titulo-productos {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .tabla-productos {
+        width: 90%;
+        margin: auto;
+        border-collapse: collapse;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .tabla-productos thead {
+        background: #4CAF50;
+        color: white;
+    }
+
+    .tabla-productos th, 
+    .tabla-productos td {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .tabla-productos tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .tabla-productos tbody tr:hover {
+        background-color: #f1f1f1;
+        transition: background 0.3s ease;
+    }
+
+    .tabla-productos img {
+        max-width: 80px;
+        max-height: 80px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>

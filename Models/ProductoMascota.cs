@@ -6,8 +6,10 @@ namespace TuProyecto.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Categoria { get; set; } // Ej: Alimento, Juguete, Higiene
+        public string Categoria { get; set; } 
         public decimal Precio { get; set; }
         public int Stock { get; set; }
+
+        public string Url { get; set; }
     }
 }
